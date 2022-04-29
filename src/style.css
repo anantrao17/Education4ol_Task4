@@ -1,0 +1,235 @@
+* {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+  }
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    padding: 20px 0;
+  }
+  .menu ul {
+    list-style: none;
+    display: flex;
+    margin-left: 40px;
+  }
+  .left-space {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .list-link {
+    text-decoration: none;
+    color: #1d2025;
+    font-weight: normal;
+  }
+  .menu-list {
+    padding: 0 18px;
+    font-weight: 600;
+  }
+  .right-space {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .cart-btn {
+    margin-right: 50px;
+    cursor: pointer;
+    display: flex;
+  }
+  .user-icon {
+    height: 45px;
+    width: 45px;
+  }
+  .main-section {
+    display: flex;
+    margin-top: 80px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .product-hero {
+    width: 100%;
+    height: 60%;
+    border-radius: 20px;
+  }
+  .product-gallary {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: row;
+  }
+  .img {
+    border-radius: 10px;
+    margin-left: 10px;
+    height: 110px;
+  }
+  .product-information {
+    margin-top: 70px;
+    margin-left: 90px;
+  }
+  .info-heading {
+    color: hsl(196, 96%, 42%);
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+  }
+  .product-name {
+    font-size: 3rem;
+    padding-top: 15px;
+    padding-bottom: 50px;
+    color: hsl(0, 0%, 0%);
+  }
+  .product-desp {
+    padding-bottom: 20px;
+    color: #68707d;
+    line-height: 1.8rem;
+  }
+  .price-discount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .price-discount h2 {
+    font-size: 1.9rem;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+  .price-discount p {
+    border: 1px solid hsl(25, 100%, 94%);
+    background-color: hsl(25, 100%, 94%);
+    padding: 5px;
+    color: hsl(196, 96%, 42%);
+    font-weight: bold;
+  }
+  .discounter-price p {
+    margin-top: 10px;
+    color: #b6bcc8;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: line-through;
+  }
+  .add-to-cart {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+  }
+  .counter-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #f7f8fd;
+    background-color: #f7f8fd;
+    width: 25%;
+    padding: 18px;
+    justify-content: space-between;
+    border-radius: 5px;
+  }
+  .minus,
+  .plus {
+    cursor: pointer;
+  }
+  .cart {
+    display: flex;
+    margin-left: 30px;
+    border: 1px solid hsl(196, 96%, 42%);
+    background-color: hsl(196, 96%, 42%);
+    color: white;
+    width: 40%;
+    padding: 18px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .cart:hover {
+    cursor: pointer;
+    background-color: #015176;
+    transform: scale(1.02);
+  }
+  .cart-icon {
+    color: white;
+    margin-right: 10px;
+  }
+  .active {
+    border: 2px solid hsl(196, 96%, 42%);
+    opacity: 0.5;
+  }
+  .cart-open {
+    z-index: 1;
+    position: absolute;
+    right: 5rem;
+    top: calc(calc(12%) + 1rem);
+    width: 21.5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem 1rem rgb(0 0 0 / 10%),
+      0 1rem 2rem 1rem rgb(0 0 0 / 10%);
+    height: fit-content;
+  }
+  .container-cart {
+    margin: 20px;
+  }
+  .cart-head {
+    font-weight: bold;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+  }
+  .product-add {
+    margin-top: 20px;
+  }
+  .product-add {
+    display: flex;
+    justify-content: space-between;
+  }
+  .added-image img {
+    width: 50px;
+    border-radius: 5px;
+  }
+  .product-name-cart {
+    font-weight: normal;
+  }
+  .product-price-cart {
+    padding-top: 5px;
+    font-weight: normal;
+  }
+  .total-price {
+    font-weight: bold;
+  }
+  .checkout {
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid hsl(196, 96%, 42%);
+    background-color: hsl(196, 96%, 42%);
+    color: white;
+    font-weight: bold;
+  }
+  .hidden {
+    display: none;
+  }
+  .quantity-number {
+    border: 1px solid hsl(196, 96%, 42%);
+    border-radius: 50%;
+    font-size: 13px;
+    position: absolute;
+    top: 18px;
+    right: 16.1%;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: hsl(196, 96%, 42%);
+    color: white;
+  }
+  

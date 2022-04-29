@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>E-commerce Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      
+      <header class="header">
+        <div class="left-space">
+          <img src="./images/logo.svg" alt="logo" />
+          <nav class="menu">
+            <ul>
+              <li class="menu-list">
+                <a class="list-link" href="#">Collection</a>
+              </li>
+              <li class="menu-list"><a class="list-link" href="#">Men</a></li>
+              <li class="menu-list"><a class="list-link" href="#">Women</a></li>
+              <li class="menu-list"><a class="list-link" href="#">About</a></li>
+              <li class="menu-list">
+                <a class="list-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="right-space">
+          <div class="cart-btn">
+            <img src="./images/icon-cart.svg" alt="cart" class="cart-image" />
+            <p class="quantity-number"></p>
+          </div>
+          <img src="./images/image-avatar.png" alt="User" class="user-icon" />
+        </div>
+        
+        <div class="cart-open hidden">
+          <div class="container-cart"></div>
+        </div>
+      </header>
+      <div class="main-section">
+        <section class="product-image">
+          <img src="./images/image-product-1.png" class="product-hero" />
+          <div class="product-gallary">
+            <img
+              src="./images/image-product-1-thumbnail.png"
+              class="img active"
+              alt="thumbnail"
+            />
+            <img
+              src="./images/image-product-2-thumbnail.png"
+              class="img"
+              alt="thumbnail"
+            />
+            <img
+              src="./images/image-product-3-thumbnail.png"
+              class="img"
+              alt="thumbnail"
+            />
+            <img
+              src="./images/image-product-4-thumbnail.png"
+              class="img"
+              alt="thumbnail"
+            />
+          </div>
+        </section>
+        <section class="product-information">
+          <p class="info-heading">Sneaker Company</p>
+          <h1 class="product-name">Fall Limited Edition Sneakers</h1>
+          <p class="product-desp">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price">
+            <div class="price-discount">
+              <h2>$125.00</h2>
+              <p>50%</p>
+            </div>
+            <div class="discounter-price">
+              <p>$250.00</p>
+            </div>
+          </div>
+          <div class="add-to-cart">
+            <div class="counter-wrapper">
+              <img  src="./images/icons8-minus-20.png" alt="Minus" class="minus" />
+              <div class="counter">1</div>
+              <img  src="./images/icons8-plus-24.png" alt="Plus" class="plus" />
+            </div>
+            <div class="cart">
+              <img src="./images/icon-cart.svg" alt="Cart" class="cart-icon" />
+              <p>Add To Cart</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    
+    <script>    
+const galleryImages = document.querySelectorAll(".img");
+const heroImg = document.querySelector(".product-hero");
+
+const plus = document.querySelector(".plus");
+const minus = document.querySelector(".minus");
+const counter = document.querySelector(".counter");
+
+galleryImages.forEach((img) => {
+  img.addEventListener("click", changeImage);
+});
+
+plus.addEventListener("click", increaseQuant);
+minus.addEventListener("click", decreaseQuant);
+
+function changeImage(event) {
+  galleryImages.forEach((img) => {
+    img.classList.remove("active");
+  });
+
+  event.target.classList.add("active");
+
+  heroImg.src = event.target.src.replace("-thumbnail", "");
+}
+
+function increaseQuant() {
+  let value = parseInt(counter.innerHTML);
+  value = value + 1;
+  counter.innerHTML = value;
+}
+
+function decreaseQuant() {
+  let value = parseInt(counter.innerHTML);
+  if (value > 0) {
+    value = value - 1;
+    counter.innerHTML = value;
+  }
+}
+    </script>
+    <footer>
+      <p class="attribution">
+      Created by <a href="#">Anantrao Gawale</a>.
+      </p>
+  </footer>
+  </body>
+</html>
